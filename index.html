@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BYU Idaho - Discover Opportunities</title>
+  <style>
+    /* ベースのスタイル */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #f0f0f5; /* 背景色を追加 */
+    }
+
+    header {
+      background-color: #003E74;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-image: url('hero-bg.jpg'); /* 背景画像を追加 */
+      background-size: cover;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeInDown 2s;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      animation: fadeInUp 2s;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #003E74;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      margin-top: 800px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Slideshow styles */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+      width: 100%;
+      height: 400px;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4 }
+      to { opacity: 1 }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text { font-size: 11px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#">BYU Idaho</a>
+    <nav>
+      <a href="#programs">Programs</a>
+      <a href="#campus-life">Campus Life</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover Opportunities at BYU Idaho</h1>
+    <p>Your journey to excellence starts here.</p>
+  </section>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="temple.jpg" alt="Campus Image 1">
+      <div class="text">Explore our serene campus environments.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="song.jpg" alt="Campus Image 2">
+      <div class="text">Engage in vibrant student life activities.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="ok.jpg" alt="Campus Image 3">
+      <div class="text">Achieve academic excellence with us.</div>
+    </div>
+  </div>
+
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <section id="life" class="content-section">
+    <div class="card">
+      <img src="cafe.jpg" alt="Campus Life">
+      <h3>Life on Campus</h3>
+      <p>Explore various campus programs and find the perfect major or minor for your future success.</p>
+    </div>
+    <div class="card"> <!-- 修正 -->
+      <img src="christmas.jpg" alt="Campus Events">
+      <h3>Campus Events</h3>
+      <p>Join clubs, activities, and engage with the vibrant BYU-Idaho community.</p>
+    </div>
+    <div class="card"> <!-- 修正 -->
+      <img src="workout.jpg" alt="Admissions">
+      <h3>Admissions</h3>
+      <p>Start your journey at BYU-Idaho today. Learn about our admissions process and take the next step towards your future.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 BYU Idaho. All rights reserved. <a href="https://www.byui.edu">Visit our official site</a>.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+</body>
+</html>
+
+
